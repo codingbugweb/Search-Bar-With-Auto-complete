@@ -1,0 +1,78 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+body {
+   background: #3a0ca3;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+::selection {
+   color: #fff;
+   background: #3a0ca3;
+}
+.wrapper {
+   max-width: 450px;
+   margin: 300px auto;
+}
+.wrapper .search {
+   background: #fff;
+   width: 100%;
+   border-radius: 5px;
+   position: relative;
+   box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.search input {
+   height: 55px;
+   width: 100%;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   padding: 0 60px 0 20px;
+   font-size: 18px;
+   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.search.active input {
+   border-radius: 5px 5px 0 0;
+}
+.search .autocomp-box {
+   padding: 0;
+   opacity: 0;
+   pointer-events: none;
+   max-height: 280px;
+   overflow-y: auto;
+}
+.search.active .autocomp-box {
+   padding: 10px 8px;
+   opacity: 1;
+   pointer-events: none;
+}
+.autocomp-box li {
+   list-style: none;
+   padding: 8px 12px;
+   display: none;
+   width: 100%;
+   cursor: default;
+   border-radius: 3px;
+}
+.search.active .autocomp-box li {
+   display: block;
+}
+.autocomp-box li:hover {
+   background: #efefef;
+}
+.search .icon {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   height: 55px;
+   width: 55px;
+   text-align: center;
+   line-height: 70px;
+   font-size: 20px;
+   color: #3a0ca3;
+   cursor: pointer;
+}
